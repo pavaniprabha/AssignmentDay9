@@ -2,7 +2,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class EditDetails {
-	    public static String details;
+	    public static String name;
 	    public static int row=2,column=8;
 	    public static String[] index = {"First Name","Last Name","Address","City","State","Zip Code","Mobile Number","Email ID"};
 	    public static Scanner sc = new Scanner(System.in);
@@ -30,13 +30,13 @@ public class EditDetails {
 
 
 	    public static void Edit(String[][] addArray){
-	        System.out.println("Enter contacts to Edit Details : ");
-	        details = sc.next();
+	        System.out.println("Enter person name to Edit Details : ");
+	        name = sc.next();
 	        int i = 0;
-	        while (!Objects.equals(addArray[i][0], details)){
+	        while (!Objects.equals(addArray[i][0], name)){
 	            i++;
 	        }
-	        System.out.println("Enter details to change :");
+	        System.out.println("choose details to change :");
 	        System.out.println("0.First Name, 1.Last Name, 2.Address, 3.City, 4.State, 5.Zip Code, 6.Mobile Number, 7.Email ID");
 	        int j = sc.nextInt();
 	        System.out.println("Enter New "+ index[j]+ ": ");
